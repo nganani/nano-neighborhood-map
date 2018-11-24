@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Mobile first design - starting with stacked view for small screens */
+.column1 .column2 {
+    width: 100%;
+    vertical-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.places {
+    margin: 0;
+    padding: 0;
+}
+
+.place {
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    background-color: #d2d2d2;
+}
+
+.map {
+    min-height: 1000px;
+}
+
+/* Responsive layout - if screen large enough, side by side layout */
+@media screen and (min-width: 600px) {
+    .column1 {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        vertical-align: center;
+    }
+
+    .column2 {
+        float: left;
+        width: 80%;
+        padding: 10px;
+    }
+}
